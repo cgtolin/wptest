@@ -11,4 +11,5 @@ set :deploy_to, "/var/www/html/wpstage"
 # Setup Git
 ############################################
 
+
 set :branch, "development"
