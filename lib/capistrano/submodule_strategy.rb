@@ -26,6 +26,7 @@ module SubmoduleStrategy
   # and copy everything to the release path
   def release
     release_branch = fetch(:release_branch, File.basename(release_path))
+    puts release_branch
     git :checkout, '-B', release_branch, 
       fetch(:remote_branch, "origin/#{fetch(:branch)}")
     git :submodule, :update, '--init'
