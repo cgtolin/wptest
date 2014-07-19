@@ -2,7 +2,7 @@
 lock '3.1.0'
 
 # require Slack config
-require './config/slack'
+#require './config/slack'
 
 ############################################
 # Setup WordPress
