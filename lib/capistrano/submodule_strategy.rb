@@ -27,7 +27,7 @@ module SubmoduleStrategy
   def release
     release_branch = fetch(:release_branch, File.basename(release_path))
     puts release_branch
-    git :checkout, '-B', release_branch, 
+    git :checkout, '-f', release_branch, 
       fetch(:remote_branch, "origin/#{fetch(:branch)}")
     git :submodule, :update, '--init'
     context.execute "rsync -ar --filter=':- .wpignore' --exclude=.git\* #{repo_path}/ #{release_path}"
